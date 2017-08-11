@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
-const nunjucks = require('nunjucks');
 const models = require('./models');
+const morgan = require('morgan');
+const nunjucks = require('nunjucks');
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.set('view engine', 'html');
 // when res.render works with html files, have it use nunjucks to do so
 app.engine('html', nunjucks.render);
 
+app.use(morgan('dev'));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 
