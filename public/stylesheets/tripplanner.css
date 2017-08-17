@@ -1,0 +1,43 @@
+body {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 400; }
+
+h1, h2 {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 700; }
+
+a, .btn {
+  font-family: Roboto, sans-serif;
+  font-weight: 400; }
+
+#selectionMenu {
+  float: right;
+  display: block;
+  margin-right: 10px;
+  overflow: auto;
+  width: 25vw; }
+
+#map-canvas {
+  height: 100vh; }
+
+#dayPlanner {
+  clear: right;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  overflow: auto;
+  width: 25vw; }
+
+#date {
+  text-align: center; }
+
+#navbar {
+  display: block;
+  width: 100vw; }
+
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px; }
+
+.well {
+  border-radius: 0px; }

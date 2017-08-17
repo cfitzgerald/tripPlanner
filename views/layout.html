@@ -1,14 +1,56 @@
-<!-- layout.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Tripplanner Static UI</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Boostrap core CSS -->
+    <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+    <!-- Custom styles -->
+    <link rel='stylesheet' href='/public/stylesheets/tripplanner.css' />
+    <!-- Googe Fonts -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700|Zilla+Slab:300,400,700' />
   </head>
-
   <body>
-    <h1>Trip Planner!</h1>
-    <div class="container content">
-      {% block content %}{% endblock %}
-    </div>
+    <!-- //NAVBAR -->
+    <nav class="navbar navbar-inverse" id='navbar'>
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><i class="glyphicon glyphicon-map-marker"></i> TripPlanner</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- //ENDNAVBAR -->
+    {% block content %}
+    {% endblock %}
   </body>
+
+  <script src="/vendor/jquery/dist/jquery.min.js"></script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQmNsGZMo2nvpN6QfELgnl4ETEfais59I&sensor=true">
+  </script>
+
+  <script async defer
+    src='/public/js/googleMaps.js'>
+  </script>
 
 </html>

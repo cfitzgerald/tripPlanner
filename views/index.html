@@ -1,5 +1,78 @@
-{% extends "layout.html" %}
-
+{% extends './layout.html' %}
 {% block content %}
+<!-- Selection Menu -->
+<div class='container well' id='selectionMenu'>
+  <div class ='row'>
+    <div class='col col-4' id='hotels'>
+      <h3>Hotels</h3>
+      <select name='hotels' class='form-control'>
+      {% for hotel in hotels %}
+        <option value= '{{ hotel.id }}'>{{ hotel.name }}</option>
+      {% endfor %}
+      </select>
+    </div>
+    <div class='col col-4' id='restaurants'>
+      <h3>Restaurants</h3>
+      <select name='restaurants' class='form-control'>
+      {% for restaurant in restaurants %}
+        <option value= '{{ restaurant.id }}'>{{ restaurant.name }}</option>
+      {% endfor %}
+      </select>
+    </div>
+    <div class='col col-4'>
+      <h3>Things To Do</h3>
+      <select name='activites' class='form-control' id='activities'>
+      {% for activity in activities %}
+        <option value= '{{ activity.id }}'>{{ activity.name }}</option>
+      {% endfor %}
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- Day Planner -->
+<div id='dayPlanner' class='well'>
+  <div id='date'>
+    <h2>Day 1</h2>
+  </div>
+  <!-- Pagination Bar -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination">
+      <li>
+        <a href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li>
+        <a href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- endPagination -->
+
+  <!-- schedule -->
+  <div id='schedule'>
+    <div class='scheduleItem'>
+      <h3>My Hotel</h3>
+    </div>
+    <div class='scheduleItem'>
+      <h3>My Restaurants</h3>
+    </div>
+    <div class='scheduleItem'>
+      <h3>My Activities</h3>
+    </div>
+  </div>
+  <!-- endSchedule -->
+</div>
+
+<!-- Google Map -->
+<div id='map-canvas'></div>
 
 {% endblock %}

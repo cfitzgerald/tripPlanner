@@ -1,0 +1,67 @@
+@import "variables";
+
+// $navbar-color: #F7F50;
+
+body {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 700;
+}
+
+a, .btn {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+#selectionMenu {
+  float: right;
+  display: block;
+  margin-right: 10px;
+  overflow: auto;
+  width: 25vw;
+}
+
+#map-canvas {
+  // background-color: #B0C4DE;
+  height: 100vh;
+  // width: 100vw;
+}
+
+#dayPlanner {
+  clear: right;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  overflow: auto;
+  width: 25vw;
+}
+
+#date {
+  text-align: center;
+}
+
+#schedule {
+
+}
+
+#navbar {
+  display: block;
+  width: 100vw;
+}
+
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+// .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+//   color: $navbar-color;
+// }
+
+.well {
+  border-radius: 0px;
+}
